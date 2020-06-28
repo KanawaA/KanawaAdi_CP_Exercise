@@ -1,0 +1,51 @@
+
+package bangun.dasar;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Segitiga extends BangunDasar{
+
+    Scanner input = new Scanner(System.in);    
+    
+    protected void set_A(double a) {
+        try{
+        System.out.println("Masukkan Nilai Alas    = ");
+        this.a = a = input.nextInt();
+        }
+        catch (InputMismatchException e){
+        System.out.print("Inputan Harus Angka");
+        }
+    }
+
+    protected void set_B(double b) {
+        try{
+        System.out.println("Masukkan Nilai Tinggi  = ");
+        this.b = b = input.nextInt();
+        }
+        catch (InputMismatchException e){
+        System.out.print("Inputan Harus Angka");
+        }
+    }
+
+    protected void set_C() {
+        this.c = (a/2)*b;
+    }
+
+    protected double get_A() {
+        return a;
+    }
+
+    protected double get_B() {
+        return b;
+    }
+
+    protected double get_C() {
+       return c;
+    }
+
+    protected void tampil() {
+        System.out.println("Hasil Luas Segitiga = "+this.c);
+    }  
+    
+}

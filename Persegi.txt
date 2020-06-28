@@ -1,0 +1,47 @@
+
+package bangun.dasar;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Persegi extends BangunDasar{
+    
+    private double a,b,c;
+    
+    Scanner input = new Scanner(System.in);    
+    
+    protected void set_A(double a) {
+        try{
+        System.out.println("Masukkan Nilai Sisi  = ");
+        this.a = a = input.nextInt();
+        }
+        catch (InputMismatchException e){
+        System.out.print("Inputan Harus Angka");
+        }
+    }
+
+    protected void set_B(double b) {
+        this.b = b;
+    }
+
+    protected void set_C() {
+        c = a*a;
+    }
+
+    protected double get_A() {
+        return a;
+    }
+
+    protected double get_B() {
+        return b;
+    }
+
+    protected double get_C() {
+       return c;
+    }
+
+    protected void tampil() {
+        System.out.println("Hasil Luas Persegi = "+ get_C());
+    } 
+       
+}

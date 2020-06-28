@@ -1,0 +1,45 @@
+
+package bangun.dasar;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Lingkaran extends BangunDasar{
+
+    Scanner input = new Scanner(System.in);    
+    
+    protected void set_A(double a) {
+        try{
+        System.out.println("Masukkan Nilai Jari-Jari = ");
+        this.a = a = input.nextInt();
+        }
+        catch (InputMismatchException e){
+        System.out.print("Inputan Harus Angka");
+        }
+    }
+
+    protected void set_B(double b) {
+        System.out.println("Nilai Pi  = 3.14 ");
+    }
+
+    protected void set_C() {
+        this.c = a*3.14;
+    }
+
+    protected double get_A() {
+        return a;
+    }
+
+    protected double get_B() {
+        return b;
+    }
+
+    protected double get_C() {
+       return c;
+    }
+
+    protected void tampil() {
+        System.out.println("Hasil Luas Lingkaran = "+this.c);
+    }  
+    
+}

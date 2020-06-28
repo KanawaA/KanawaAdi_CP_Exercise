@@ -1,0 +1,58 @@
+
+package bangun.dasar;
+
+import java.util.Scanner;
+
+public class Main {
+    
+    private static void cetaksemua (BangunDasar OB) {
+    OB.set_A(0);
+    OB.set_B(0);
+    OB.set_C();
+    OB.tampil();
+    }
+
+    public static void main(String[] args) {
+    
+    Scanner input = new Scanner(System.in);
+        String aksi;
+        
+    System.out.println("=== Menghitung Luas Bangun Datas ===");
+    System.out.println("[1] Persegi");
+    System.out.println("[2] Persegi Panjang");
+    System.out.println("[3] Segitiga");
+    System.out.println("[4] Lingkaran");
+    System.out.println("[5] Bujur Sangkar");
+    System.out.println("-----------------------------------------");
+    
+    System.out.println("[1] Persegi");
+    BangunDasar LuasP = new Persegi();
+        cetaksemua(LuasP);
+      System.out.println("");
+    
+    System.out.println("[2] Persegi Panjang");  
+    BangunDasar LuasPP = new PersegiPanjang();
+        cetaksemua(LuasPP);
+      System.out.println("");
+    
+    System.out.println("[3] Segitiga");  
+    BangunDasar LuasS = new Segitiga();
+        cetaksemua(LuasS);
+      System.out.println("");
+      
+    System.out.println("[4] Lingkaran");  
+    BangunDasar LuasL = new Lingkaran();
+        cetaksemua(LuasL);
+      System.out.println("");
+      
+    System.out.println("[5] Jajar Genjang");  
+    BangunDasar LuasJ = new JajarGenjang();
+        cetaksemua(LuasJ);
+      System.out.println("");
+
+    
+    System.out.println("--------------------------");
+
+
+    }
+}
